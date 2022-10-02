@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
@@ -15,6 +16,20 @@ namespace missionify
                 Console.WriteLine("No File");
                 Environment.Exit(0);
             }
+
+            // Edited, Add templateList
+            var templateList = new List<(string, string, string)>()
+            {
+                ("春季", "晴朗", "1500"),
+                ("冬季", "强风", "1200"),
+                ("冬季", "下雪", "0900"),
+                ("秋季", "晴朗", "1200"),
+                ("秋季", "下雨", "0900"),
+                ("夏季", "酷热", "0600"),
+                ("夏季", "无风", "1500"),
+                ("中秋", "无风", "0000"),
+            };
+            // Edited Done
 
             var presets = Directory.GetFiles("presets");
             var dates = presets.Where(x => x.StartsWith("presets\\date_"));
@@ -43,7 +58,20 @@ namespace missionify
                         var w1 = w.Replace("presets\\weather_", string.Empty).Replace(".lua", string.Empty);
                         var w2 = File.ReadAllText(w);
 
-                        var file = $"output\\{f}_{d1}_{t1}_{w1}.miz";
+                        var file = $"output\\{f}_{d1}_{w1}_{t1}.miz";
+
+                        // Edited, Skip combinations except templateList
+                        var skipCurrent = true;
+                        var templateCounter = 0;
+                        foreach(var template in templateList)
+                        {
+                            templateCounter++;
+                            if (d1.Equals(template.Item1) && w1.Equals(template.Item2) && t1.Equals(template.Item3))
+                                skipCurrent = false;
+                        }
+                        if (templateList.Count < templateCounter || skipCurrent)
+                            continue;
+                        // Edited Done
 
                         Console.Write($"Generating {file}...");
                         File.Copy($"{f}.miz", file, true);
