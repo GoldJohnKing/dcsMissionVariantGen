@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="presets\date_中秋.lua">
+    <None Update="presets\date_夜间.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="presets\date_冬季.lua">
