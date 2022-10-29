@@ -1,2 +1,2 @@
 ["start_time"] = 43200,
-    ["forcedOptions"]
+} -- end of mission

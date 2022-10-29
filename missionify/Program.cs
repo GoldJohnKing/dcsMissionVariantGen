@@ -116,7 +116,7 @@ namespace missionify
             var modsreg = new Regex("\\[\"requiredModules\"\\](.|\\n)+end of \\[\"requiredModules\"\\]", RegexOptions.Multiline);
             text = modsreg.Replace(text, mods);
 
-            var timereg = new Regex("\\[\"start_time\"\\] = [0-9]+,\\n\\s*\\[\"forcedOptions\"\\]", RegexOptions.Multiline);
+            var timereg = new Regex("\\[\"start_time\"\\] = [0-9]+,\\n} -- end of mission", RegexOptions.Multiline);
             text = timereg.Replace(text, time);
 
             return text;
