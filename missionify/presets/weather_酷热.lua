@@ -50,6 +50,10 @@
         ["atmosphere_type"] = 0,
         ["groundTurbulence"] = 21,
         ["name_fr"] = "Eté, fortes chaleurs",
+        ["halo"] = 
+        {
+            ["preset"] = "auto",
+        }, -- end of ["halo"]
         ["type_weather"] = 0,
         ["modifiedTime"] = true,
         ["name"] = "Summer. Heat",

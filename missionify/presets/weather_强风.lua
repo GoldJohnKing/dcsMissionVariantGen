@@ -50,6 +50,10 @@
         ["atmosphere_type"] = 0,
         ["groundTurbulence"] = 17,
         ["name_fr"] = "Hiver, nuages et vent",
+        ["halo"] = 
+        {
+            ["preset"] = "auto",
+        }, -- end of ["halo"]
         ["type_weather"] = 0,
         ["modifiedTime"] = true,
         ["name"] = "Winter. Wind & clouds",

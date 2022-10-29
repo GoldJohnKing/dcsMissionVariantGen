@@ -50,6 +50,10 @@
         ["atmosphere_type"] = 0,
         ["groundTurbulence"] = 0,
         ["name_fr"] = "Printemps, ciel dégagé",
+        ["halo"] = 
+        {
+            ["preset"] = "auto",
+        }, -- end of ["halo"]
         ["type_weather"] = 0,
         ["modifiedTime"] = true,
         ["name"] = "Spring, Clear sky",

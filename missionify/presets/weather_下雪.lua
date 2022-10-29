@@ -50,6 +50,10 @@
         ["atmosphere_type"] = 0,
         ["groundTurbulence"] = 7,
         ["name_fr"] = "Hiver, fortes averses de neige et nuages",
+        ["halo"] = 
+        {
+            ["preset"] = "auto",
+        }, -- end of ["halo"]
         ["type_weather"] = 0,
         ["modifiedTime"] = false,
         ["name"] = "Winter. Heavy snow & clouds",

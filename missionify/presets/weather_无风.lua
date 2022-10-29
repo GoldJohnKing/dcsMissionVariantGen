@@ -42,6 +42,10 @@
         ["atmosphere_type"] = 0,
         ["groundTurbulence"] = 0,
         ["name_fr"] = "Eté, ciel dégagé, vent nul",
+        ["halo"] = 
+        {
+            ["preset"] = "auto",
+        }, -- end of ["halo"]
         ["type_weather"] = 0,
         ["modifiedTime"] = false,
         ["name"] = "Winter, clean sky",

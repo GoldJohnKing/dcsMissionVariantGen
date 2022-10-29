@@ -50,6 +50,10 @@
         ["atmosphere_type"] = 0,
         ["groundTurbulence"] = 7,
         ["name_fr"] = "Automne, averses",
+        ["halo"] = 
+        {
+            ["preset"] = "auto",
+        }, -- end of ["halo"]
         ["type_weather"] = 0,
         ["modifiedTime"] = true,
         ["name"] = "Autumn, Rainy day",
