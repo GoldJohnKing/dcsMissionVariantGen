@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
@@ -107,16 +107,16 @@ namespace missionify
         {
             var text = original;
 
-            var datereg = new Regex("\\[\"date\"\\](.|\\n)+end of \\[\"date\"\\]", RegexOptions.Multiline);
+            var datereg = new Regex("\\[\"date\"\\](.|\\n)+end of \\[\"date\"\\]", RegexOptions.Multiline | RegexOptions.NonBacktracking);
             text = datereg.Replace(text, date);
 
-            var weatherreg = new Regex("\\[\"weather\"\\](.|\\n)+end of \\[\"weather\"\\]", RegexOptions.Multiline);
+            var weatherreg = new Regex("\\[\"weather\"\\](.|\\n)+end of \\[\"weather\"\\]", RegexOptions.Multiline | RegexOptions.NonBacktracking);
             text = weatherreg.Replace(text, weather);
 
-            var modsreg = new Regex("\\[\"requiredModules\"\\](.|\\n)+end of \\[\"requiredModules\"\\]", RegexOptions.Multiline);
+            var modsreg = new Regex("\\[\"requiredModules\"\\](.|\\n)+end of \\[\"requiredModules\"\\]", RegexOptions.Multiline | RegexOptions.NonBacktracking);
             text = modsreg.Replace(text, mods);
 
-            var timereg = new Regex("\\[\"start_time\"\\] = [0-9]+,\\n} -- end of mission", RegexOptions.Multiline);
+            var timereg = new Regex("\\[\"start_time\"\\] = [0-9]+,\\n} -- end of mission", RegexOptions.Multiline | RegexOptions.NonBacktracking);
             text = timereg.Replace(text, time);
 
             return text;
