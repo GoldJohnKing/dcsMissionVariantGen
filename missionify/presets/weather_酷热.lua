@@ -22,7 +22,7 @@
         ["enable_fog"] = false,
         ["season"] = 
         {
-            ["temperature"] = 42,
+            ["temperature"] = 40,
         }, -- end of ["season"]
         ["qnh"] = 770,
         ["cyclones"] = 
